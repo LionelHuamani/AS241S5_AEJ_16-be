@@ -1,0 +1,34 @@
+server:
+  port: 8081
+  url: http://localhost:8081
+
+spring:
+  application:
+    name: ms-spring-webflux-nosql
+  data:
+    mongodb:
+      uri: mongodb+srv://lionel:lionelhl19@cluster0.xkmanjw.mongodb.net
+      database: 16_lionel_huamani
+
+rapidapi:
+  webcontent:
+    url: https://web-content-gateway.p.rapidapi.com
+    host: web-content-gateway.p.rapidapi.com
+    apikey: c11955fd46msh1bf2553e681531ap1aced0jsn0e8b3d1534d7
+
+  chatgpt:
+    url: https://chatgpt-42.p.rapidapi.com
+    host: chatgpt-42.p.rapidapi.com
+    apikey: c11955fd46msh1bf2553e681531ap1aced0jsn0e8b3d1534d7
+
+logging:
+  level:
+    org.springframework.web.reactive.function.client: DEBUG
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
