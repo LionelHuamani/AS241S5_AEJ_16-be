@@ -17,14 +17,14 @@ public class WebClientConfig {
     @Value("${rapidapi.webcontent.apikey}")
     private String webKey;
 
-    @Value("${rapidapi.chatgpt.url}")
-    private String chatUrl;
+    @Value("${rapidapi.imageai.url}")
+    private String imageUrl;
 
-    @Value("${rapidapi.chatgpt.host}")
-    private String chatHost;
+    @Value("${rapidapi.imageai.host}")
+    private String imageHost;
 
-    @Value("${rapidapi.chatgpt.apikey}")
-    private String chatKey;
+    @Value("${rapidapi.imageai.apikey}")
+    private String imageKey;
 
     @Bean
     public WebClient webContentClient() {
@@ -32,16 +32,15 @@ public class WebClientConfig {
                 .baseUrl(webUrl)
                 .defaultHeader("x-rapidapi-host", webHost)
                 .defaultHeader("x-rapidapi-key", webKey)
-                .defaultHeader("Content-Type", "application/json")
                 .build();
     }
 
     @Bean
-    public WebClient chatGPTClient() {
+    public WebClient imageClient() {
         return WebClient.builder()
-                .baseUrl(chatUrl)
-                .defaultHeader("x-rapidapi-host", chatHost)
-                .defaultHeader("x-rapidapi-key", chatKey)
+                .baseUrl(imageUrl)
+                .defaultHeader("x-rapidapi-host", imageHost)
+                .defaultHeader("x-rapidapi-key", imageKey)
                 .defaultHeader("Content-Type", "application/json")
                 .build();
     }

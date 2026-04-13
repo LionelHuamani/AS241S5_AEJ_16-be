@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Cognitive Services - Age Detector con Spring Boot
 **Servicio Cognitivo de Rapid API**, Age Detector, este modelo detecta todos los rostros de una imagen y determina automáticamente la edad de cada persona basándose en sus atributos faciales. Mediante visión artificial, nuestro detector de edad analiza los atributos faciales y estima la edad más probable. Devuelve una lista con todos los rostros de la imagen y su edad correspondiente, con sus probabilidades.
 
@@ -71,6 +70,3 @@ Spring WebFlux | Data MongoDB Reactive | Project Reactor
       <version>2.0.2</version>
 </dependency>
 ```
-=======
-# AS241S5_AEJ_16-be
->>>>>>> 4f885e0375bacdf379b87fe6567df93fb375d987

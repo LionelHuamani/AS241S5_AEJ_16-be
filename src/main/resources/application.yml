@@ -12,13 +12,13 @@ spring:
 
 rapidapi:
   webcontent:
-    url: https://web-content-gateway.p.rapidapi.com
-    host: web-content-gateway.p.rapidapi.com
+    url: https://instagram-video-transcript.p.rapidapi.com
+    host: instagram-video-transcript.p.rapidapi.com
     apikey: c11955fd46msh1bf2553e681531ap1aced0jsn0e8b3d1534d7
 
-  chatgpt:
-    url: https://chatgpt-42.p.rapidapi.com
-    host: chatgpt-42.p.rapidapi.com
+  imageai:
+    url:  https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com
+    host: ai-text-to-image-generator-flux-free-api.p.rapidapi.com
     apikey: c11955fd46msh1bf2553e681531ap1aced0jsn0e8b3d1534d7
 
 logging:

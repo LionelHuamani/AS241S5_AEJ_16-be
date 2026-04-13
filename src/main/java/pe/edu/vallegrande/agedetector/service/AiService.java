@@ -11,4 +11,10 @@ public interface AiService {
     Mono<AiAnalysis> findById(String id);
 
     Mono<AiAnalysis> analyze(String url);
+
+    Mono<String> getTranscript(String url);
+
+    Mono<String> generateImage(String prompt);
+
+    Mono<AiAnalysis> generateAndSaveImage(String prompt);
 }

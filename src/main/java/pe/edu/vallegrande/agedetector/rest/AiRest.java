@@ -29,8 +29,18 @@ public class AiRest {
         return aiService.findById(id);
     }
 
+    @PostMapping("/image")
+    public Mono<AiAnalysis> image(@RequestParam String prompt) {
+    return aiService.generateAndSaveImage(prompt);
+}
+
     @PostMapping("/analyze")
     public Mono<AiAnalysis> analyze(@RequestParam String url) {
         return aiService.analyze(url);
     }
+
+    @PostMapping("/image/save")
+    public Mono<AiAnalysis> imageSave(@RequestParam String prompt) {
+    return aiService.generateAndSaveImage(prompt);
+}
 }
