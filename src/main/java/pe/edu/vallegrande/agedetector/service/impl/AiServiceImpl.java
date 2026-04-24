@@ -17,7 +17,7 @@ public class AiServiceImpl implements AiService {
 
     private final AiAnalysisRepository repository;
     private final WebClient webContentClient;
-    private final WebClient imageClient; // 🔥 CAMBIO
+    private final WebClient imageClient; 
 
     @Override
     public Flux<AiAnalysis> findAll() {
@@ -29,7 +29,6 @@ public class AiServiceImpl implements AiService {
         return repository.findById(id);
     }
 
-    // ✅ TRANSCRIPT
     @Override
     public Mono<String> getTranscript(String url) {
         return webContentClient.post()
@@ -41,7 +40,6 @@ public class AiServiceImpl implements AiService {
                 .doOnNext(res -> System.out.println("TRANSCRIPT: " + res));
     }
 
-    // ✅ IMAGEN IA
     @Override
     public Mono<String> generateImage(String prompt) {
         return imageClient.post()
@@ -62,7 +60,6 @@ public class AiServiceImpl implements AiService {
                 });
     }
 
-    // 🔥 OPCIONAL
     @Override
     public Mono<AiAnalysis> analyze(String url) {
 
@@ -72,7 +69,7 @@ public class AiServiceImpl implements AiService {
                 String cleanText = transcript.replaceAll(".*\"text\":\"(.*?)\".*", "$1");
 
                 AiAnalysis ai = new AiAnalysis();
-                ai.setType("transcript"); // 🔥 CLAVE
+                ai.setType("transcript"); 
                 ai.setUrl(url);
                 ai.setWebContent(cleanText);
                 ai.setAiResponse("Transcript generado");

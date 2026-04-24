@@ -1,0 +1,6 @@
+# kubectl create namespace lionel-huamani-16-namespace (COMANDO)
+# kubectl apply -f lionel-huamani-16-namespace.yml (yml)
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lionel-huamani-16-namespace
