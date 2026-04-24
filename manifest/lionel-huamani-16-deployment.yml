@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: lionel-huamani-16-container
-        image: lionel321/age-detector-be:1.0   # Reemplaza con tu imagen Docker Hub
+        image: lionelhuamani/as241-proyecto:1.0   # Reemplaza con tu imagen Docker Hub
         imagePullPolicy: IfNotPresent        # Evitar traer siempre la última versión si hay una actual
         envFrom:
         - secretRef:
