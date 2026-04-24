@@ -1,6 +1,6 @@
 server:
   port: ${PORT}
-  url: ${SERVER_URL}
+  url: ${SERVER_URL:http://localhost:8081}
 
 spring:
   application:

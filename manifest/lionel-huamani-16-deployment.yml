@@ -17,7 +17,9 @@ spec:
       containers:
       - name: lionel-huamani-16-container
         image: lionelhuamani/as241-proyecto:1.0   # Reemplaza con tu imagen Docker Hub
-        imagePullPolicy: IfNotPresent        # Evitar traer siempre la última versión si hay una actual
+        imagePullPolicy: IfNotPresent 
+        ports:
+        - containerPort: 8081       # Evitar traer siempre la última versión si hay una actual
         envFrom:
         - secretRef:
             name: lionel-huamani-16-secret  # Esto cargará todos los valores como variables de entorno
