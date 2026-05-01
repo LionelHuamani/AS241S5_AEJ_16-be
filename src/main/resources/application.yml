@@ -1,26 +1,26 @@
 server:
-  port: ${PORT}
+  port: ${PORT:8081}
   url: ${SERVER_URL:http://localhost:8081}
 
 spring:
   application:
     name: ms-spring-webflux-nosql
+
   data:
     mongodb:
-      uri: ${MONGODB_URI}
-      database: ${MONGODB_DB}
+      uri: ${MONGODB_URI:mongodb+srv://lionel:lionelhl19@cluster0.xkmanjw.mongodb.net/?appName=Cluster0}
+      database: ${MONGODB_DB:16_lionel_huamani}
 
 rapidapi:
   webcontent:
-      url: ${RAPIDAPI_WEB_URL}
-      host: ${RAPIDAPI_WEB_HOST}
-      apikey: ${RAPIDAPI_WEB_KEY}
-
+    url: ${RAPIDAPI_WEB_URL:https://instagram-video-transcript.p.rapidapi.com}
+    host: ${RAPIDAPI_WEB_HOST:instagram-video-transcript.p.rapidapi.com}
+    apikey: ${RAPIDAPI_WEB_KEY:c11955fd46msh1bf2553e681531ap1aced0jsn0e8b3d1534d7}
 
   imageai:
-    url:  ${RAPIDAPI_IMG_URL}
-    host: ${RAPIDAPI_IMG_HOST}
-    apikey: ${RAPIDAPI_IMG_KEY}
+    url: ${RAPIDAPI_IMG_URL:https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com}
+    host: ${RAPIDAPI_IMG_HOST:ai-text-to-image-generator-flux-free-api.p.rapidapi.com}
+    apikey: ${RAPIDAPI_IMG_KEY:c11955fd46msh1bf2553e681531ap1aced0jsn0e8b3d1534d7}
 
 logging:
   level:

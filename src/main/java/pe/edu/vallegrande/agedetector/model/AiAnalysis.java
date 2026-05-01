@@ -16,6 +16,7 @@ public class AiAnalysis {
     private String imageUrl;    
     private LocalDateTime creationDate;
     private LocalDateTime updateDate;
+    private String status;
 
     public AiAnalysis() {}
 
@@ -42,4 +43,7 @@ public class AiAnalysis {
 
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }

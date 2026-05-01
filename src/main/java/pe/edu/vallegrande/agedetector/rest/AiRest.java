@@ -20,27 +20,42 @@ public class AiRest {
     }
 
     @GetMapping
-    public Flux<AiAnalysis> findAll(){
+    public Flux<AiAnalysis> findAll() {
         return aiService.findAll();
     }
 
+    @GetMapping("/inactive")
+    public Flux<AiAnalysis> findInactive() {
+        return aiService.findInactive();
+    }
+
     @GetMapping("/{id}")
-    public Mono<AiAnalysis> findById(@PathVariable String id){
+    public Mono<AiAnalysis> findById(@PathVariable String id) {
         return aiService.findById(id);
     }
 
     @PostMapping("/image")
     public Mono<AiAnalysis> image(@RequestParam String prompt) {
-    return aiService.generateAndSaveImage(prompt);
-}
+        return aiService.generateAndSaveImage(prompt);
+    }
 
     @PostMapping("/analyze")
     public Mono<AiAnalysis> analyze(@RequestParam String url) {
         return aiService.analyze(url);
     }
 
-    @PostMapping("/image/save")
-    public Mono<AiAnalysis> imageSave(@RequestParam String prompt) {
-    return aiService.generateAndSaveImage(prompt);
-}
+    @PutMapping("/{id}")
+    public Mono<AiAnalysis> update(@PathVariable String id, @RequestBody AiAnalysis ai) {
+        return aiService.update(id, ai);
+    }
+
+    @PatchMapping("/delete/{id}")
+    public Mono<AiAnalysis> delete(@PathVariable String id) {
+        return aiService.delete(id);
+    }
+
+    @PatchMapping("/restore/{id}")
+    public Mono<AiAnalysis> restore(@PathVariable String id) {
+        return aiService.restore(id);
+    }
 }

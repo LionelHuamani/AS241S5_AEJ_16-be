@@ -8,6 +8,8 @@ public interface AiService {
 
     Flux<AiAnalysis> findAll();
 
+    Flux<AiAnalysis> findInactive();
+
     Mono<AiAnalysis> findById(String id);
 
     Mono<AiAnalysis> analyze(String url);
@@ -17,4 +19,10 @@ public interface AiService {
     Mono<String> generateImage(String prompt);
 
     Mono<AiAnalysis> generateAndSaveImage(String prompt);
+
+    Mono<AiAnalysis> update(String id, AiAnalysis newData);
+
+    Mono<AiAnalysis> delete(String id);
+
+    Mono<AiAnalysis> restore(String id);
 }
