@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: lionel-huamani-16-container
-        image: lionelhuamani/as241-proyecto:1.0   # Reemplaza con tu imagen Docker Hub
+        image: lionelhuamani/as241s5-aej-16-be:latest   # Reemplaza con tu imagen Docker Hub
         imagePullPolicy: IfNotPresent 
         ports:
         - containerPort: 8081       # Evitar traer siempre la última versión si hay una actual

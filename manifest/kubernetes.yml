@@ -45,6 +45,6 @@ curl http://192.168.49.2:30001/v1/api/ai
 curl http://192.168.49.2:30001/v1/api/ai/analyze
 
 # crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes
-kubectl port-forward service/lionel-huamani-16-service 8081:30001
+kubectl port-forward service/lionel-huamani-16-service 8081:8081
 
 
