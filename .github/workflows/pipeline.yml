@@ -3,10 +3,12 @@ name: SonarCloud Analysis
 on:
   push:
     branches:
-      - develop
+     - develop
+     - main
   pull_request:
     branches:
       - develop
+      - main
   workflow_dispatch:  # Permite ejecución manual desde GitHub Actions UI
 
 jobs:
